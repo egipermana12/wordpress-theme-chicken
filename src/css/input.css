@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans;
+}
+
+/* COMPONENT */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-2 rounded-full;
+}
+
+.btn-secondary {
+  @apply border border-primary text-primary px-6 py-2 rounded-full;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  @apply text-textPrimary hover:text-primary transition block;
+}
+
+.current-menu-item > a {
+  @apply text-primary font-semibold;
+}
+
+.custom-logo {
+  @apply h-10 w-auto;
+}
+
+footer a {
+  @apply text-secondary hover:text-textSecondary transition opacity-70 font-extralight;
+  font-size: 13px;
+}
+
+footer .current-menu-item > a {
+  @apply text-secondary font-semibold;
+}
