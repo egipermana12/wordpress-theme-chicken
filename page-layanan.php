@@ -30,6 +30,7 @@
                 $featuresRaw = get_post_meta(get_the_ID(), '_features', true);
                 $features    = array_filter(array_map('trim', explode("\n", $featuresRaw)));
                 $highlight   = get_post_meta(get_the_ID(), '_highlight', true);
+                $url         = get_post_meta(get_the_ID(), '_url', true);
                 $image       = has_post_thumbnail()
                     ? get_the_post_thumbnail_url(get_the_ID(), 'medium')
                     : get_template_directory_uri() . '/assets/img/default.jpg';
@@ -39,7 +40,7 @@
                     'subtitle'  => $subtitle,
                     'features'  => $features,
                     'highlight' => $highlight === '1',
-                    'url'       => get_permalink(),
+                    'url'       => $url ?: get_permalink(),
                     'image'     => $image
                 ]);
 

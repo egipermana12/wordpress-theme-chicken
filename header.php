@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 
     <header class="w-full bg-white shadow-sm sticky top-0 z-50 relative">
-        <div class="max-w-7xl mx-auto px-12 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto md:px-12 py-4 px-6 flex items-center justify-between">
 
             <!-- LOGO -->
             <div class="text-xl font-bold text-primary">

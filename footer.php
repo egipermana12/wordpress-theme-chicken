@@ -5,7 +5,7 @@
         <div>
             <h2 class="text-[16px] font-semibold text-secondary mb-4">Krenchise</h2>
             <p class="text-secondary font-extralight leading-relaxed text-[13px] opacity-70 md:max-w-[353px]">
-                <?php echo get_theme_mod('footer_description'); ?>
+                <?php echo esc_html(get_theme_mod('footer_description')); ?>
             </p>
         </div>
 
@@ -57,9 +57,11 @@
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
 
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
 </script>
 </body>
 

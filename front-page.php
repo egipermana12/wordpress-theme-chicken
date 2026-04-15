@@ -8,6 +8,10 @@
 
 <?php get_template_part('template-parts/layanan'); ?>
 
+<?php get_template_part('template-parts/services'); ?>
+
+<?php get_template_part('template-parts/katamitra'); ?>
+
 <main class="max-w-4xl mx-auto px-6 py-10">
     <?php
     while (have_posts()) : the_post();

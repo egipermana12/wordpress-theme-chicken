@@ -1,16 +1,16 @@
-<section class="py-16 bg-primary md:max-h-[625px] mb-24">
-    <div class="md:max-width-[1200px] w-full mx-auto px-12 text-center relative">
+<section class="md:py-16 py-6 bg-primary md:max-h-[625px] mb-16">
+    <div class="max-w-7xl w-full mx-auto px-6 md:px-12 text-center relative">
         <!-- LABEL -->
-        <p class="text-accent text-sm font-semibold mb-3">
+        <p class="text-accent md:text-sm text-xs font-semibold mb-3">
             LAYANAN PILIHAN
         </p>
 
         <!-- TITLE -->
-        <h2 class="text-3xl md:text-[30px] font-semibold text-white mb-4">
+        <h2 class="text-xl md:text-3xl font-semibold text-white mb-2">
             Solusi Memulai Bisnis Anda
         </h2>
 
-        <p class="text-white/80 text-[16px] font-light max-w-xl mx-auto mb-12">
+        <p class="text-white/80 md:text-sm text-xs font-light max-w-xl mx-auto mb-14">
             Temukan layanan sesuai dengan kebutuhan dan budget bisnis Anda bersama kami
         </p>
 
@@ -49,7 +49,7 @@
                         'subtitle'  => $subtitle,
                         'features'  => $features,
                         'highlight' => $highlight === '1',
-                        'url'       => get_permalink(),
+                        'url'       => $url ?: get_permalink(),
                         'image'     => $image // 🔥 kirim ke component
                     ]);
 

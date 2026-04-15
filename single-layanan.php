@@ -7,12 +7,13 @@
     </h1>
 
     <?php if (has_post_thumbnail()) : ?>
-        <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"
+        <img src="<?= esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>"
+            alt="<?= esc_attr(get_the_title()); ?>"
             class="w-full rounded-lg mb-6">
     <?php endif; ?>
 
     <p class="mb-4 text-gray-600">
-        <?= get_post_meta(get_the_ID(), '_subtitle', true); ?>
+        <?= esc_html(get_post_meta(get_the_ID(), '_subtitle', true)); ?>
     </p>
 
     <ul class="list-disc pl-5 space-y-2">
@@ -21,6 +22,10 @@
         $features = explode("\n", $featuresRaw);
 
         foreach ($features as $feature) :
+            $feature = trim($feature);
+            if ($feature === '') {
+                continue;
+            }
         ?>
             <li><?= esc_html($feature); ?></li>
         <?php endforeach; ?>
