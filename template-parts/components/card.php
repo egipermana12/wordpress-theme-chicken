@@ -5,6 +5,7 @@ $features = $args['features'] ?? [];
 $highlight = $args['highlight'] ?? false;
 $url = $args['url'] ?? '#';
 $image = $args['image'] ?? get_template_directory_uri() . '/assets/img/default.jpg';
+
 ?>
 
 <!-- CARDS -->

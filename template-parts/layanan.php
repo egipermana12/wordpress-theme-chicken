@@ -24,38 +24,39 @@
                     [
                         'key' => '_is_selected',
                         'value' => '1',
-                    ]
+                    ],
                 ],
-                'orderby'        => 'menu_order', // 🔥 urut berdasarkan order
-                'order'          => 'ASC',
+                'orderby' => 'menu_order', // 🔥 urut berdasarkan order
+                'order' => 'ASC',
             ]);
 
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
 
-                    $subtitle    = get_post_meta(get_the_ID(), '_subtitle', true);
+                    $subtitle = get_post_meta(get_the_ID(), '_subtitle', true);
                     $featuresRaw = get_post_meta(get_the_ID(), '_features', true);
-                    $features    = array_filter(array_map('trim', explode("\n", $featuresRaw)));
-                    $highlight   = get_post_meta(get_the_ID(), '_highlight', true);
-                    $url         = get_post_meta(get_the_ID(), '_url', true);
+                    $features = array_filter(array_map('trim', explode("\n", $featuresRaw)));
+                    $highlight = get_post_meta(get_the_ID(), '_highlight', true);
+                    // $url         = get_post_meta(get_the_ID(), '_url', true);
 
                     // ✅ ambil image
                     $image = has_post_thumbnail()
                         ? get_the_post_thumbnail_url(get_the_ID(), 'medium')
-                        : get_template_directory_uri() . '/assets/img/default.jpg';
+                        : get_template_directory_uri().'/assets/img/default.jpg';
 
                     get_template_part('template-parts/components/card', null, [
-                        'title'     => get_the_title(),
-                        'subtitle'  => $subtitle,
-                        'features'  => $features,
+                        'title' => get_the_title(),
+                        'subtitle' => $subtitle,
+                        'features' => $features,
                         'highlight' => $highlight === '1',
-                        'url'       => $url ?: get_permalink(),
-                        'image'     => $image // 🔥 kirim ke component
+                        'url' => get_permalink(),
+                        'image' => $image, // 🔥 kirim ke component
                     ]);
 
-                endwhile;
+                }
                 wp_reset_postdata();
-            endif;
+            }
             ?>
         </div>
 

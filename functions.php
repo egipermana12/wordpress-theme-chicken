@@ -514,7 +514,44 @@ function theme_opportunity_customizer($wp_customize)
 }
 add_action('customize_register', 'theme_opportunity_customizer');
 
+function krenchise_set_related_menu_active($classes, $item)
+{
+    $related_menu_urls = [];
+
+    if (is_singular('layanan')) {
+        $related_menu_urls[] = home_url('/layanan/');
+    }
+
+    if (is_singular('produk')) {
+        $related_menu_urls[] = home_url('/produk/');
+    }
+
+    if (is_singular('post')) {
+        $related_menu_urls[] = home_url('/blog/');
+    }
+
+    if (empty($related_menu_urls)) {
+        return $classes;
+    }
+
+    $item_url = isset($item->url) ? trailingslashit($item->url) : '';
+
+    foreach ($related_menu_urls as $menu_url) {
+        if ($item_url === trailingslashit($menu_url)) {
+            $classes[] = 'current-menu-item';
+            $classes[] = 'current_page_item';
+            $classes[] = 'current-menu-ancestor';
+            break;
+        }
+    }
+
+    return array_unique($classes);
+}
+add_filter('nav_menu_css_class', 'krenchise_set_related_menu_active', 10, 2);
+
 
 require_once get_template_directory() . '/inc/layanan.php';
 require_once get_template_directory() . '/inc/service.php';
 require_once get_template_directory() . '/inc/katamitra.php';
+require_once get_template_directory() . '/inc/metodology.php';
+require_once get_template_directory() . '/inc/produk.php';

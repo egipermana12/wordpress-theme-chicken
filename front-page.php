@@ -12,13 +12,9 @@
 
 <?php get_template_part('template-parts/katamitra'); ?>
 
-<main class="max-w-4xl mx-auto px-6 py-10">
-    <?php
-    while (have_posts()) : the_post();
-        the_content(); // Gutenberg hanya untuk content
-    endwhile;
-    ?>
+<?php get_template_part('template-parts/blog'); ?>
 
-</main>
+<?php get_template_part('template-parts/siapbisnis'); ?>
+
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<footer class="bg-textPrimary text-secondary mt-20">
+<footer class="bg-textPrimary text-secondary">
     <div class="md:max-w-[1200px] mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
 
         <!-- LOGO / BRAND -->
@@ -23,7 +23,7 @@
                         'items_wrap' => '%3$s',
                         'fallback_cb' => false,
                     ]);
-                    ?>
+                ?>
                 </nav>
             </div>
 

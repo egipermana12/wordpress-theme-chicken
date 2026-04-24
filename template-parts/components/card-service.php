@@ -10,11 +10,11 @@ $deskripsi = $args['deskripsi'] ?? '';
         <span class="text-white md:text-xl text-sm">
             <?php
             if ($icon) {
-                echo '<img src="' . esc_url($icon) . '" alt="icon">';
+                echo '<img src="'.esc_url($icon).'" alt="icon">';
             }
-            ?>
+?>
         </span>
     </div>
     <h3 class="font-semibold md:text-lg text-base mb-2"><?= esc_html($judul) ?></h3>
-    <p class="text-sm md:text-base leading-relaxed text-textSecondary"><?= esc_html($deskripsi) ?></p>
+    <p class="text-sm md:text-base italic leading-relaxed text-textSecondary"><?= esc_html($deskripsi) ?></p>
 </div>
