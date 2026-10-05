@@ -1,8 +1,22 @@
 <?php get_header(); ?>
 
 <section class="max-w-7xl mx-auto md:px-12 px-6 py-12">
-    <div class="mb-10">
+    <!--<div class="mb-10">
         <?php the_content(); ?>
+    </div>
+-->
+
+    <div class="text-center mb-24">
+        <p class="text-primary md:text-sm text-xs font-semibold mb-3">
+            PRODUK KAMI
+        </p>
+
+        <h2 class="text-xl md:text-3xl font-semibold text-textPrimary mb-3">
+            Produk Pilihan
+        </h2>
+        <p class="text-textSecondary text-xs md:text-sm font-light mb-12">
+            Temukan Produk Unggulan yang Dirancang untuk Memenuhi Kebutuhan Bisnis Anda
+        </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 lg:gap-12">

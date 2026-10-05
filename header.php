@@ -34,7 +34,7 @@
                         'fallback_cb' => false,
                     ]);
                     ?>
-                    <a href="#" class="bg-primary text-white px-4 py-2 rounded-full text-sm block md:hidden w-1/2">
+                    <a href="<?php echo esc_url(krenchise_get_gabungkemitraan_url()); ?>" class="bg-primary text-white px-4 py-2 rounded-full text-sm block md:hidden w-1/2">
                         Kemitraan
                     </a>
                 </div>
@@ -49,7 +49,7 @@
             </button>
 
             <!-- CTA -->
-            <a href="#" class="bg-primary text-white px-4 py-2 rounded-full text-sm hidden md:block">
+            <a href="<?php echo esc_url(krenchise_get_gabungkemitraan_url()); ?>" class="bg-primary text-white px-4 py-2 rounded-full text-sm hidden md:block">
                 Kemitraan
             </a>
 

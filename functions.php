@@ -147,7 +147,6 @@ function theme_menus()
 }
 add_action('after_setup_theme', 'theme_menus');
 
-
 //custom footer
 function theme_customizer($wp_customize)
 {
@@ -555,3 +554,4 @@ require_once get_template_directory() . '/inc/service.php';
 require_once get_template_directory() . '/inc/katamitra.php';
 require_once get_template_directory() . '/inc/metodology.php';
 require_once get_template_directory() . '/inc/produk.php';
+require_once get_template_directory() . '/inc/gabungkemitraan.php';

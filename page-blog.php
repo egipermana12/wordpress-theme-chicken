@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <section class="max-w-6xl mx-auto px-6 py-12">
@@ -8,7 +7,7 @@
                 BLOG
             </p>
 
-            <h2 class="text-base md:text-xl font-semibold text-textPrimary">
+            <h2 class="text-xl md:text-2xl font-semibold text-textPrimary">
                 Temukan Tips dan Trik, <br> serta Berita Seputar Dunia Bisnis
             </h2>
         </div>
